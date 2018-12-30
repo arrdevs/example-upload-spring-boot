@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="container">
+	<h1>Master Photo Android Application</h1>
+		<table class="table" border=1px style="border-collapse: collapse; border: 1px solid black">
+		    <tr><th>City</th>
+		        <th>Country</th>
+		        <th>State</th>
+		        <th>PostalCode</th>
+		        <th>Download</th>
+		    </tr>
+		    <tr th:each="item : ${page.content}">
+		        <td th:text="${item.city}"></td>
+		        <td th:text="${item.country}"></td>
+		        <td th:text="${item.state}"></td>
+		        <td th:text="${item.postalCode}"></td>
+		    	<td>
+		    	<a th:href="@{${item.imageUrl}}">Photo</a>
+		    	</td>
+		    </tr>
+		</table>
+	</div>
+</body>
+</html>
